@@ -47,3 +47,50 @@ print(acc)
 # Write a function to compute the Nth Fibonacci number, where N is a parameter.
 #   You may assume that N will be greater than or equal to 3
 
+
+# A Monte Carlo Simulation
+import random
+
+print(random.random())
+
+# Boolean expressions
+# > greater than
+# >= greater than or equal to
+# < less than
+# <= less than or equal to
+# == the same as [ equal to ]
+# != NOT equal to
+
+dogWeight = 25
+print(dogWeight <= 25)
+catWeight = 15
+
+# compound Boolean operators
+# and (both have to be true or else it will give you a false answer)
+# or (only one has be true to make a true answer)
+# not
+
+
+print(dogWeight < 30 or catWeight < 20)
+
+a = 5
+b = 10
+c = 75
+
+if a > b:
+    c = 45
+
+print(c)
+
+if a > b:
+    c = 45
+    if b > c:
+        a = 25
+    else:
+        a = -25
+else:
+    c = 1050
+    if b == a:
+        c = 25
+
+print(a, b, c)
