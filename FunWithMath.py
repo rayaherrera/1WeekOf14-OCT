@@ -70,9 +70,10 @@ catWeight = 15
 # or (only one has be true to make a true answer)
 # not
 
+print(not catWeight < 20)
 
-print(dogWeight < 30 or catWeight < 20)
 
+# Decision Making -- Selection statements
 a = 5
 b = 10
 c = 75
@@ -96,17 +97,22 @@ else:
 print(a, b, c)
 
 
-d = 55
+d = 85
 e = 72
 f = 44
 ans = 0
+
 
 if d > e:
     ans = 12
 else:
     if d == e:
-        ans = 12
-
+        ans = 50
+    else:
+        if f < d * e:
+            ans = 100
+        else:
+            ans = 75
 print(ans)
 
 def montePi(numDarts):
@@ -115,7 +121,8 @@ def montePi(numDarts):
 
     for i in range(numDarts):
         x = random.random()
-        y = random.random
+        y = random.random()
+
         distance = math.sqrt(x**2 + y**2)
 
         if distance <= 1:
@@ -124,7 +131,7 @@ def montePi(numDarts):
     pi = inCircle / numDarts * 4
     return pi
 
-print(montePi(100))
+print(montePi(10000))
 
 import turtle
 
@@ -146,12 +153,29 @@ def showMontePi(numDarts):
 
     inCircle = 0
     t.penup()
-    for i in range(numdarts):
+
+    for i in range(numDarts):
         x = random.random()
-        Y = random.random()
+        y = random.random()
 
-        distance= math.sqrt(x**2 + y**2)
+        distance = math.sqrt(x**2 + y**2)
 
-        t.goto(x,y)
+        t.goto(x, y)
 
+        if distance <= 1:
+            inCircle = inCircle + 1
+            t.color("blue")
+        else:
+            t.color("red")
 
+        t.dot()
+
+    pi = inCircle / numDarts * 4
+    scn.exitonclick()
+    return pi
+
+showMontePi(1000)
+
+#  Your Task:
+#  Modify the simulation to plot points in the entire circle.  You will have to
+#    adjust the calculated value of pi accordingly.
