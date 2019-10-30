@@ -131,14 +131,14 @@ def montePi(numDarts):
     pi = inCircle / numDarts * 4
     return pi
 
-print(montePi(10000))
+print(montePi(99999))
 
 import turtle
 
 def showMontePi(numDarts):
     scn = turtle.Screen()
     t = turtle.Turtle()
-
+    t.speed(50)
     scn.setworldcoordinates(-2, -2, 2, 2)
 
     t.penup()
@@ -155,8 +155,8 @@ def showMontePi(numDarts):
     t.penup()
 
     for i in range(numDarts):
-        x = random.random()
-        y = random.random()
+        x = random.uniform(-1, 1)
+        y = random.uniform(-1, 1)
 
         distance = math.sqrt(x**2 + y**2)
 
@@ -173,8 +173,8 @@ def showMontePi(numDarts):
     pi = inCircle / numDarts * 4
     scn.exitonclick()
     return pi
-
-showMontePi(1000)
+showMontePi(100)
+showMontePi(99999)
 
 #  Your Task:
 #  Modify the simulation to plot points in the entire circle.  You will have to
